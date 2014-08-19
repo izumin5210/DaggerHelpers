@@ -26,7 +26,7 @@ public class DaggerApplication extends Application implements DaggerContext {
 
     @Override
     public ObjectGraph getObjectGraph() {
-        return null;
+        return mObjectGraph;
     }
 
     protected List<Object> getModules() {

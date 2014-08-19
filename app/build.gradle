@@ -24,3 +24,18 @@ dependencies {
     compile 'com.squareup.dagger:dagger:1.2.2'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+def repos = new File(rootDir, "repository")
+
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${repos.absolutePath}"
+            pom.version = '0.0.1'
+            pom.groupId = 'info.izumin.android'
+            pom.artifactId = 'daggerhelpers'
+        }
+    }
+}

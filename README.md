@@ -1,18 +1,13 @@
 # DaggerHelpers
 
-settings.gradle
-
 ```groovy
-buildscript {
+allprojects {
     repositories {
         jcenter()
         maven { url 'http://izumin.info/DaggerHelpers/repository' }
     }
-    ...
 }
 ```
-
-build.gradle
 
 ```groovy
 dependencies {
